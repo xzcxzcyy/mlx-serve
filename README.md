@@ -5,8 +5,9 @@
 ## 快速启动
 
 ```bash
-make install   # 安装依赖
-make run       # 启动服务（默认绑定 0.0.0.0:8000）
+cp config.example.yaml config.yaml   # 从模板创建配置，按需填入 hf_token
+make install                         # 安装依赖
+make run                             # 启动服务（默认绑定 0.0.0.0:8000）
 ```
 
 服务仅接受本机（`127.0.0.1`）和 Lume 虚拟机子网（`192.168.64.0/24`）的请求，其他来源返回 `403`。
@@ -90,7 +91,7 @@ curl -X POST "http://127.0.0.1:8000/transcribe?include_segments=true" \
 
 ## 配置
 
-编辑 `config.yaml`：
+复制 `config.example.yaml` 为 `config.yaml` 并按需修改：
 
 ```yaml
 server:
