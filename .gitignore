@@ -1,0 +1,7 @@
+output/
+data/
+__pycache__/
+.vscode/
+.DS_Store
+old/
+config.yaml

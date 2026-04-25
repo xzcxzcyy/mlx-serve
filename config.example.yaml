@@ -1,0 +1,23 @@
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+model:
+  name: "mlx-community/Qwen3-ASR-1.7B-8bit"
+  hf_token: ""  # 留空则不设置；也可通过环境变量 HF_TOKEN 覆盖
+
+security:
+  allowed_cidrs:
+    - "127.0.0.1/32"
+    - "192.168.64.0/24"
+
+upload:
+  max_bytes: -1  # -1 表示不限制
+  allowed_extensions:
+    - wav
+    - mp3
+    - flac
+    - m4a
+    - aac
+    - ogg
+    - opus
